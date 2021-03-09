@@ -1,0 +1,120 @@
+.header {
+	border-bottom: 1px solid #d8d8d8;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 50;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 2;
+	}
+	// .header__body
+	&__body {
+		position: relative;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 65px;
+	}
+	// .header__burger
+	&__burger {
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 20px;
+		position: relative;
+		z-index: 5;
+		span {
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			left: 0;
+			top: 9px;
+			background-color: #1d1d1d;
+			transition: all 0.3s ease 0s;
+		}
+		&:before,
+		&:after {
+			content: '';
+			background-color: #1d1d1d;
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			left: 0;
+			transition: all 0.3s ease 0s;
+		}
+		&:before {
+			content: '';
+			top: 0;
+		}
+		&:after {
+			content: '';
+			bottom: 0;
+		}
+	}
+	&__burger.active:before {
+		transform: rotate(45deg);
+		top: 9px;
+	}
+	&__burger.active:after {
+		transform: rotate(-45deg);
+		bottom: 9px;
+	}
+	&__burger.active span {
+		transform: scale(0);
+	}
+	// .header__menu
+	&__menu {
+		position: fixed;
+		top: -100%;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		transition: all 0.3s ease 0s;
+		background-color: #888888;
+		padding-top: 85px;
+		z-index: 3;
+	}
+	&__menu.active {
+		top: 0;
+	}
+	// .header__list
+	&__list {
+		display: block;
+		position: relative;
+		z-index: 2;
+		text-transform: uppercase;
+		li {
+			margin: 0 0 20px 10px;
+		}
+	}
+	// .header__link
+	&__link {
+		font-size: 26px;
+		color: #fff;
+	}
+	// .header__arrow, .header__search, .header__login
+	&__arrow,
+	&__search,
+	&__login {
+		position: relative;
+		z-index: 2;
+	}
+	// .header__logo
+	&__logo {
+		position: relative;
+		z-index: 3;
+		img {
+			max-width: 100%;
+			display: block;
+		}
+	}
+}

@@ -1,0 +1,103 @@
+.merch {
+	position: relative;
+	margin-bottom: 75px;
+	// .merch__item
+	&__item {
+		border-radius: 10px;
+		margin: 10px 0;
+		overflow: hidden;
+		background-color: #fff;
+	}
+	// .merch__image
+	&__image {
+		position: relative;
+		img {
+			width: 100%;
+			// height: 100%;
+			// object-fit: cover;
+			// object-position: center;
+		}
+	}
+	// .merch__favorite
+	&__favorite {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		background-color: #aeaeae;
+
+		position: absolute;
+		top: 30px;
+		right: 30px;
+		z-index: 1;
+
+		& img {
+			width: 25px;
+			height: 25px;
+		}
+	}
+	// .merch__content
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		padding: 15px;
+	}
+	// .merch__info
+	&__info {
+		max-width: 200px;
+	}
+	// .merch__info-title
+	&__info-title {
+		font-size: 16px;
+		font-weight: 600;
+		line-height: 18px;
+		text-align: left;
+		margin-bottom: 20px;
+	}
+	// .merch__info-text
+	&__info-text {
+		color: #979797;
+		font-size: 13px;
+		line-height: 15px;
+		margin-bottom: 5px;
+	}
+	// .merch__info-color
+	&__info-color {
+		font-size: 13px;
+		line-height: 15px;
+		margin-bottom: 8px;
+	}
+	// .merch__info-price
+	&__info-price {
+		font-size: 16px;
+		font-weight: 700;
+	}
+	// .merch__pics
+	&__pics {
+		margin-top: auto;
+		flex-direction: column;
+	}
+	// .merch__order
+	&__order {
+		margin-top: 20px;
+	}
+	// .merch__count
+	&__count {
+		position: absolute;
+		bottom: -39px;
+		right: 80px;
+		z-index: 5;
+		font-weight: 300;
+		font-size: 50px;
+		font-size: 20px;
+		line-height: 23px;
+		span {
+			font-size: 40px;
+			line-height: 46px;
+			color: #aa4242;
+		}
+	}
+}

@@ -1,0 +1,35 @@
+@import 'nullstyle';
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+@import 'slider';
+
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400;
+	font-size: 13px;
+	background: rgb(248, 248, 248);
+	color: #1d1d1d;
+}
+
+a {
+	color: inherit;
+}
+
+._container {
+	max-width: 1300px;
+	margin: 0 auto;
+	padding: 0 20px;
+	overflow: hidden;
+	&--visible {
+		overflow: visible;
+	}
+}
+.lock {
+	overflow: hidden;
+}
+
+@import 'blocks/header';
+@import 'blocks/intro';
+@import 'blocks/filter';
+@import 'blocks/merch';
+@import 'blocks/about';
+@import 'blocks/footer';
